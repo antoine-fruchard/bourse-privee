@@ -1,38 +1,38 @@
 import Link from "next/link";
-import { ArrowUpRight, MessageCircle, Newspaper, BarChart3, LineChart } from "lucide-react";
+import { ArrowUpRight, Bell, BarChart3, LineChart, TrendingUp } from "lucide-react";
 
 const sections = [
   {
-    href: "/club",
-    label: "Le club",
+    href: "/alertes",
+    label: "Alertes",
     badge: "Nouveau",
-    title: "Échangez avec 2 480 membres",
-    description: "Questions, débats, battles : la communauté qui vous fait progresser.",
-    Icon: MessageCircle,
+    title: "Soyez alerté en temps réel",
+    description: "Seuils de prix, recommandations, earnings : recevez vos alertes par email ou WhatsApp.",
+    Icon: Bell,
     accent: "from-[#FF7049] to-[#FF9D7A]",
   },
   {
-    href: "/actualites/fil",
-    label: "Actualités",
-    title: "L'essentiel des marchés",
-    description: "Morning Zapping, journal hebdo, lives : on vous tient au courant.",
-    Icon: Newspaper,
-    accent: "from-[#563BFF] to-[#8E6BFF]",
-  },
-  {
     href: "/portefeuilles/long-terme",
-    label: "Portefeuilles",
-    title: "Recommandations suivies",
-    description: "Long terme, court terme, ETF : 12 valeurs phares avec performances live.",
+    label: "Portefeuilles US",
+    title: "Nos sélections américaines",
+    description: "US Quality Growth, Momentum, ETF Core : nos portefeuilles avec performances live.",
     Icon: LineChart,
-    accent: "from-[#20C997] to-[#5AD7B0]",
+    accent: "from-[#563BFF] to-[#8E6BFF]",
   },
   {
     href: "/analyses/portefeuille",
     label: "Analyses",
-    title: "Outils & formations",
-    description: "Analyse technique, objectifs, screeners : la boîte à outils complète.",
+    title: "Analyses profondes",
+    description: "Fiches valeur, analyse technique, objectifs de cours : tout pour décider en connaissance.",
     Icon: BarChart3,
+    accent: "from-[#20C997] to-[#5AD7B0]",
+  },
+  {
+    href: "/actualites/fil",
+    label: "Actualités US",
+    title: "Wall Street en direct",
+    description: "Morning Briefing, earnings, Fed : l'essentiel des marchés US traduit pour vous.",
+    Icon: TrendingUp,
     accent: "from-[#1E1863] to-[#563BFF]",
   },
 ];

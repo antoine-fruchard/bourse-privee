@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { ArrowRight, Sparkles, Users } from "lucide-react";
+import { ArrowRight, Sparkles, Bell } from "lucide-react";
 import { LinkButton } from "@/components/ui/button";
 import { TickerLogo } from "@/components/ui/ticker-logo";
 import { stocks } from "@/data/stocks";
 import { formatPercent, formatPrice } from "@/lib/utils";
 
 export function Hero() {
-  const featured = stocks.slice(0, 4);
+  const featured = stocks.slice(0, 5);
 
   return (
     <section className="relative overflow-hidden">
@@ -18,29 +18,30 @@ export function Hero() {
           <div className="lg:col-span-7">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[var(--gris-3)] shadow-[var(--shadow-xs)] text-xs font-bold uppercase tracking-widest text-[var(--violet-700)]">
               <Sparkles className="w-3.5 h-3.5 text-[var(--violet-500)]" />
-              Club Bourse Privée — édition 2026
+              HelloBroker — Nasdaq & NYSE 2026
             </span>
             <h1 className="mt-5 text-[44px] lg:text-[64px] leading-[1.05] font-extrabold tracking-tight">
-              Investir en bourse{" "}
-              <span className="text-gradient">avec une longueur d&apos;avance</span>.
+              On vous aide à acheter des{" "}
+              <span className="text-gradient">actions américaines</span>.
             </h1>
             <p className="mt-5 text-[18px] lg:text-[20px] text-[var(--gris-1)] max-w-2xl leading-relaxed">
-              Recommandations long et court terme, portefeuilles modèles, communauté d&apos;experts
-              et formations : tout ce qu&apos;il faut pour acheter et vendre vos actifs financiers
-              avec sérénité.
+              Recommandations sur le Nasdaq et le NYSE, portefeuilles modèles, analyses en profondeur
+              et alertes en temps réel — tout ce qu&apos;il faut pour investir aux États-Unis avec
+              une longueur d&apos;avance.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <LinkButton href="/portefeuilles/long-terme" size="lg" trailingIcon={<ArrowRight className="w-4 h-4" />}>
-                Voir les portefeuilles
+                Voir les portefeuilles US
               </LinkButton>
-              <LinkButton href="/club/questions" size="lg" variant="outline">
-                Poser une question
+              <LinkButton href="/alertes" size="lg" variant="outline">
+                <Bell className="w-4 h-4 mr-2" />
+                Configurer mes alertes
               </LinkButton>
             </div>
             <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm">
-              <Stat value="+184,6%" label="Long Terme depuis 2018" trend="up" />
-              <Stat value="2 480" label="Membres actifs" />
-              <Stat value="14j" label="Temps de réponse moyen — 4h" />
+              <Stat value="+198,4%" label="US Quality Growth depuis 2018" trend="up" />
+              <Stat value="12" label="valeurs US en portefeuille" />
+              <Stat value="24h" label="délai moyen des alertes email/WA" />
             </div>
           </div>
 
@@ -51,13 +52,13 @@ export function Hero() {
                 <div className="flex items-center justify-between mb-5">
                   <div>
                     <p className="text-xs font-bold uppercase tracking-widest text-[var(--gris-1)]">
-                      Recommandations en cours
+                      Recommandations actives
                     </p>
-                    <p className="text-lg font-extrabold tracking-tight">Notre live d&apos;aujourd&apos;hui</p>
+                    <p className="text-lg font-extrabold tracking-tight">Actions US · Live</p>
                   </div>
                   <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-500 text-white text-[11px] font-bold uppercase tracking-widest">
                     <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-                    Live
+                    NYSE ouvert
                   </span>
                 </div>
                 <ul className="space-y-1">
@@ -70,7 +71,7 @@ export function Hero() {
                         <TickerLogo ticker={s.ticker} size="md" />
                         <div className="min-w-0 flex-1">
                           <p className="font-bold leading-tight truncate">{s.name}</p>
-                          <p className="text-xs text-[var(--gris-1)]">{s.sector}</p>
+                          <p className="text-xs text-[var(--gris-1)]">{s.ticker} · {s.exchange}</p>
                         </div>
                         <div className="text-right shrink-0">
                           <p className="font-bold tabular-nums">{formatPrice(s.price, s.currency)}</p>
@@ -87,19 +88,19 @@ export function Hero() {
                   ))}
                 </ul>
                 <Link
-                  href="/portefeuilles/recommandations"
-                  className="mt-4 block w-full text-center h-11 rounded-full bg-[var(--gris-4)] text-sm font-semibold flex items-center justify-center gap-2 hover:bg-[var(--gris-3)] transition-colors"
+                  href="/recherche"
+                  className="mt-4 flex w-full text-center h-11 rounded-full bg-[var(--gris-4)] text-sm font-semibold items-center justify-center gap-2 hover:bg-[var(--gris-3)] transition-colors"
                 >
-                  Voir les 27 recommandations actives
+                  Voir toutes les actions US
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
 
-              <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-[var(--shadow-md)] border border-[var(--gris-3)] px-4 py-3 flex items-center gap-3 hidden md:flex">
-                <Users className="w-5 h-5 text-[var(--violet-500)]" />
+              <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-[var(--shadow-md)] border border-[var(--gris-3)] px-4 py-3 hidden md:flex items-center gap-3">
+                <Bell className="w-5 h-5 text-[var(--orange-500)]" />
                 <div className="text-sm">
-                  <p className="font-bold leading-tight">38 experts</p>
-                  <p className="text-[var(--gris-1)] text-xs">à votre écoute</p>
+                  <p className="font-bold leading-tight">3 alertes actives</p>
+                  <p className="text-[var(--gris-1)] text-xs">Guillaume Gozlan</p>
                 </div>
               </div>
             </div>

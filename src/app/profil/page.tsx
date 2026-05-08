@@ -49,7 +49,7 @@ export default function ProfilPage() {
               { href: "/profil", icon: Settings, label: "Réglages", active: true },
               { href: "#", icon: Shield, label: "Sécurité" },
               { href: "#", icon: CreditCard, label: "Abonnement" },
-              { href: "#", icon: Bell, label: "Notifications" },
+              { href: "/alertes", icon: Bell, label: "Mes alertes" },
               { href: "#", icon: LogOut, label: "Déconnexion" },
             ].map((m) => (
               <Link
@@ -71,7 +71,7 @@ export default function ProfilPage() {
         <div className="lg:col-span-9 space-y-8">
           <div className="grid gap-3 md:grid-cols-4">
             <Card>
-              <Stat label="Performance YTD" value="+18,4%" trend="up" hint="vs MSCI World +9,2%" />
+              <Stat label="Performance YTD" value="+18,4%" trend="up" hint="vs S&P 500 +11,2%" />
             </Card>
             <Card>
               <Stat label="Valorisation suivie" value="142 800 €" trend="neutral" hint="+24 200 € sur 1 an" />
@@ -120,10 +120,10 @@ export default function ProfilPage() {
             <h2 className="text-2xl font-extrabold tracking-tight mb-4">Mes derniers mouvements</h2>
             <ul className="bg-white rounded-[var(--radius-lg)] border border-[var(--gris-3)] divide-y divide-[var(--gris-3)]">
               {[
-                { date: "06 mai 2026", action: "Recommandation suivie", body: "Microsoft : objectif relevé à 540$", icon: TrendingUp, color: "text-[var(--green-600)]" },
-                { date: "04 mai 2026", action: "Question publiée", body: "Stop-loss long terme : utile ou contre-productif ?", icon: Bell, color: "text-[var(--violet-500)]" },
-                { date: "02 mai 2026", action: "Watchlist", body: "Ajout de Crédit Agricole", icon: Award, color: "text-[var(--orange-500)]" },
-                { date: "28 avril 2026", action: "Reco clôturée", body: "ASML — sortie à l'objectif", icon: TrendingUp, color: "text-[var(--green-600)]" },
+                { date: "06 mai 2026", action: "Recommandation suivie", body: "Microsoft (MSFT) : objectif relevé à $560", icon: TrendingUp, color: "text-[var(--green-600)]" },
+                { date: "04 mai 2026", action: "Alerte déclenchée", body: "Meta (META) : seuil $700 atteint · +14,3%", icon: Bell, color: "text-[var(--orange-500)]" },
+                { date: "02 mai 2026", action: "Watchlist", body: "Ajout de Oracle (ORCL) · backlog $130B record", icon: Award, color: "text-[var(--violet-500)]" },
+                { date: "28 avril 2026", action: "Reco clôturée", body: "Tesla (TSLA) — sortie à $248 · +8,8%", icon: TrendingUp, color: "text-[var(--green-600)]" },
               ].map((a, i) => (
                 <li key={i} className="flex items-start gap-4 p-5">
                   <span className="w-9 h-9 rounded-xl bg-[var(--gris-4)] grid place-items-center shrink-0">

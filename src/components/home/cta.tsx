@@ -14,12 +14,11 @@ export function HomeCta() {
               Sans engagement
             </span>
             <h2 className="mt-5 text-4xl lg:text-5xl font-extrabold tracking-tight max-w-3xl leading-tight">
-              Prenez le contrôle de votre patrimoine financier.
+              Les meilleures actions américaines, analysées pour vous.
             </h2>
             <p className="mt-5 text-white/80 max-w-2xl text-lg leading-relaxed">
-              Recommandations chiffrées, communauté d&apos;experts, formations et outils.
-              Tout ce qu&apos;il faut pour devenir un meilleur investisseur, sans pression
-              commerciale.
+              Recommandations chiffrées sur Nasdaq et NYSE, alertes email/WhatsApp, portefeuilles modèles.
+              Tout ce qu&apos;il faut pour investir aux États-Unis avec méthode et sérénité.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <LinkButton href="/portefeuilles/long-terme" size="lg" trailingIcon={<ArrowRight className="w-4 h-4" />}>
@@ -31,9 +30,9 @@ export function HomeCta() {
             </div>
           </div>
           <div className="lg:col-span-5 grid gap-3">
-            <Card icon={<ShieldCheck className="w-4 h-4" />} title="Sécurité totale" body="Aucun mouvement sur votre compte sans votre validation explicite." />
-            <Card icon={<BookOpen className="w-4 h-4" />} title="Pédagogie d'abord" body="Chaque reco est expliquée. On vous fait gagner en autonomie." />
-            <Card icon={<Headphones className="w-4 h-4" />} title="Réponse en 4 heures" body="Notre équipe d'experts répond aux questions du club." />
+            <Card icon={<ShieldCheck className="w-4 h-4" />} title="Thèses transparentes" body="Entrée, objectif, stop-loss et date : chaque reco est traçable et datée." />
+            <Card icon={<BookOpen className="w-4 h-4" />} title="Pédagogie US first" body="Chaque action US est expliquée. Vous comprenez pourquoi, pas juste quoi acheter." />
+            <Card icon={<Headphones className="w-4 h-4" />} title="Alertes instantanées" body="Email ou WhatsApp dès qu'un seuil est atteint ou qu'une reco sort." />
           </div>
         </div>
       </div>

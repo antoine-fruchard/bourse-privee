@@ -14,9 +14,9 @@ export function Recommendations() {
   return (
     <section className="container-app py-16">
       <SectionTitle
-        eyebrow="Recommandations"
-        title="Les dernières idées de nos experts bourse"
-        description="Suivez nos thèses d'investissement avec entrée, objectif et stop-loss explicites. Toutes nos recommandations sont datées et tracées."
+        eyebrow="Recommandations US"
+        title="Nos meilleures idées sur le Nasdaq & NYSE"
+        description="Thèses d'investissement avec entrée, objectif et stop-loss explicites sur les meilleures actions américaines. Toutes datées et tracées."
         action={
           <LinkButton href="/portefeuilles/recommandations" variant="outline" trailingIcon={<ArrowRight className="w-4 h-4" />}>
             Voir toutes les recos

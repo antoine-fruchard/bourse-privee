@@ -5,7 +5,7 @@ import { PortfolioDetail } from "@/components/portfolio/portfolio-detail";
 import { portfolios } from "@/data/portfolios";
 
 export default function LongTermePage() {
-  const portfolio = portfolios.find((p) => p.id === "lt-equilibre")!;
+  const portfolio = portfolios.find((p) => p.id === "lt-us-quality")!;
   return (
     <>
       <PageHero

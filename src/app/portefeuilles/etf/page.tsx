@@ -5,7 +5,7 @@ import { PortfolioDetail } from "@/components/portfolio/portfolio-detail";
 import { portfolios } from "@/data/portfolios";
 
 export default function EtfPage() {
-  const portfolio = portfolios.find((p) => p.id === "etf-core")!;
+  const portfolio = portfolios.find((p) => p.id === "etf-us-core")!;
   return (
     <>
       <PageHero

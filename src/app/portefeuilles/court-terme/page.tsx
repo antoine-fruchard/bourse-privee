@@ -5,7 +5,7 @@ import { PortfolioDetail } from "@/components/portfolio/portfolio-detail";
 import { portfolios } from "@/data/portfolios";
 
 export default function CourtTermePage() {
-  const portfolio = portfolios.find((p) => p.id === "ct-momentum")!;
+  const portfolio = portfolios.find((p) => p.id === "ct-us-momentum")!;
   return (
     <>
       <PageHero

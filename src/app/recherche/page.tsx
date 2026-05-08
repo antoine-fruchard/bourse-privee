@@ -12,7 +12,7 @@ import { formatPercent, formatPrice, formatCompact } from "@/lib/utils";
 import { cn } from "@/lib/utils";
 
 const sectors = ["Tous", ...Array.from(new Set(allTickers.map((s) => s.sector)))];
-const exchanges = ["Tous", "EURONEXT", "NASDAQ", "NYSE", "XETRA", "LSE"];
+const exchanges = ["Tous", ...Array.from(new Set(allTickers.map((s) => s.exchange)))];
 
 export default function RecherchePage() {
   const [query, setQuery] = useState("");
@@ -49,9 +49,9 @@ export default function RecherchePage() {
     <>
       <PageHero
         breadcrumbs={[{ label: "Accueil", href: "/" }, { label: "Recherche" }]}
-        eyebrow="Screener · 17 valeurs disponibles"
-        title="Trouvez la valeur qu'il vous faut."
-        description="Filtres par secteur, place de cotation, performance, recommandation active. Le moteur central pour explorer notre univers d'investissement."
+        eyebrow="Screener · Actions US — Nasdaq & NYSE"
+        title="Trouvez votre prochaine action américaine."
+        description="Filtrez par secteur, place de cotation, performance et recommandation active. Notre univers de 17 valeurs US sélectionnées par les analystes HelloBroker."
       />
 
       <section className="container-app py-10">

@@ -11,14 +11,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Bourse Privée — HelloSafe",
+  title: "HelloBroker — Actions américaines",
   description:
-    "Le Club Bourse Privée HelloSafe : analyses, recommandations long et court terme, portefeuilles, communauté et formations pour investir mieux.",
+    "HelloBroker vous aide à acheter des actions américaines : analyses, recommandations, portefeuilles modèles et alertes sur les meilleures valeurs du Nasdaq et NYSE.",
   metadataBase: new URL("https://bourse-privee.vercel.app"),
   openGraph: {
-    title: "Bourse Privée — HelloSafe",
+    title: "HelloBroker — On vous aide à acheter des actions américaines",
     description:
-      "Analyses, portefeuilles, recommandations et communauté pour bien investir en bourse.",
+      "Recommandations, portefeuilles modèles et alertes sur les meilleures valeurs US.",
     type: "website",
   },
 };

@@ -2,28 +2,20 @@ import Link from "next/link";
 
 const columns = [
   {
-    title: "Le club",
+    title: "Actions US",
     links: [
-      { label: "Questions boursières", href: "/club/questions" },
-      { label: "Battle de la semaine", href: "/club/battle" },
-      { label: "Groupe WhatsApp", href: "/club/whatsapp" },
-    ],
-  },
-  {
-    title: "Actualités",
-    links: [
-      { label: "Fil d'actualité", href: "/actualites/fil" },
-      { label: "Journal de la Bourse", href: "/actualites/journal" },
-      { label: "Morning Zapping", href: "/actualites/morning-zapping" },
-      { label: "Évènements", href: "/actualites/evenements" },
+      { label: "Screener d'actions", href: "/recherche" },
+      { label: "Apple (AAPL)", href: "/valeur/aapl" },
+      { label: "Nvidia (NVDA)", href: "/valeur/nvda" },
+      { label: "Microsoft (MSFT)", href: "/valeur/msft" },
     ],
   },
   {
     title: "Portefeuilles",
     links: [
-      { label: "Long terme", href: "/portefeuilles/long-terme" },
-      { label: "Court terme", href: "/portefeuilles/court-terme" },
-      { label: "Le coin ETF", href: "/portefeuilles/etf" },
+      { label: "US Quality Growth", href: "/portefeuilles/long-terme" },
+      { label: "US Momentum", href: "/portefeuilles/court-terme" },
+      { label: "ETF US Core", href: "/portefeuilles/etf" },
       { label: "Performances", href: "/portefeuilles/performances" },
     ],
   },
@@ -32,8 +24,17 @@ const columns = [
     links: [
       { label: "Analyse de portefeuille", href: "/analyses/portefeuille" },
       { label: "Analyse technique", href: "/analyses/technique" },
-      { label: "Objectifs boursiers", href: "/analyses/objectifs" },
+      { label: "Objectifs de cours", href: "/analyses/objectifs" },
       { label: "Formations", href: "/analyses/formations" },
+    ],
+  },
+  {
+    title: "Mon compte",
+    links: [
+      { label: "Mes alertes", href: "/alertes" },
+      { label: "Mon profil", href: "/profil" },
+      { label: "Actualités US", href: "/actualites/fil" },
+      { label: "Communauté", href: "/club" },
     ],
   },
 ];
@@ -45,17 +46,16 @@ export function SiteFooter() {
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <div className="flex items-center gap-2">
-              <span className="w-8 h-8 rounded-lg gradient-violet grid place-items-center text-white font-extrabold">
-                B
+              <span className="w-8 h-8 rounded-lg gradient-violet grid place-items-center text-white font-extrabold text-sm">
+                HB
               </span>
               <span className="font-extrabold tracking-tight text-[17px]">
-                Bourse <span className="text-[var(--violet-500)]">Privée</span>
+                Hello<span className="text-[var(--violet-500)]">Broker</span>
               </span>
             </div>
             <p className="mt-4 text-[var(--gris-1)] text-[15px] leading-relaxed max-w-md">
-              Le club d&apos;investisseurs HelloSafe : analyses, recommandations long et court
-              terme, portefeuilles et communauté pour vous aider à acheter ou vendre vos actifs
-              financiers en toute confiance.
+              On vous aide à acheter des actions américaines. Analyses, recommandations et alertes
+              sur les meilleures valeurs du Nasdaq et du NYSE — avec la rigueur HelloSafe.
             </p>
             <div className="flex gap-3 mt-6">
               {["LinkedIn", "Twitter/X", "YouTube", "WhatsApp"].map((s) => (
@@ -93,8 +93,8 @@ export function SiteFooter() {
         </div>
         <div className="mt-12 pt-8 border-t border-[var(--gris-3)] flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <p className="text-sm text-[var(--gris-1)]">
-            © 2026 HelloSafe — Bourse Privée. Investir en bourse comporte des risques de perte
-            en capital. Cette plateforme ne constitue pas un conseil en investissement.
+            © 2026 HelloSafe — HelloBroker. Investir en bourse comporte des risques de perte en capital.
+            Cette plateforme ne constitue pas un conseil en investissement.
           </p>
           <div className="flex gap-5 text-sm">
             <Link href="#" className="text-[var(--gris-1)] hover:text-[var(--violet-500)]">
