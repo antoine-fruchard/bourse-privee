@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bourse Privée — HelloSafe
 
-## Getting Started
+Refonte moderne du Club Bourse Privée : un espace pour aider les internautes à acheter et vendre des actifs financiers en toute sérénité.
 
-First, run the development server:
+Inspiré des meilleurs acteurs US (Public, Robinhood, M1, Wealthfront), construit sur le design system HelloSafe.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Stack
+
+- **Framework** : Next.js 16 (App Router)
+- **Langage** : TypeScript strict
+- **UI** : Tailwind CSS 4 + tokens HelloSafe
+- **Charts** : Recharts
+- **Icônes** : Lucide React
+- **Animations** : Framer Motion
+
+## Structure
+
+```
+src/
+├── app/                       # Pages App Router
+│   ├── page.tsx               # Home Club Bourse Privée
+│   ├── club/                  # Questions, Battle, WhatsApp
+│   ├── actualites/            # Fil, Journal, Morning Zapping, Évènements
+│   ├── portefeuilles/         # LT, CT, ETF, Recos, Performances
+│   ├── analyses/              # Portefeuille, Technique, Objectifs, Sélections, Formations
+│   ├── valeur/[ticker]/       # Fiche valeur SSG
+│   ├── recherche/             # Screener
+│   └── profil/                # Espace membre
+├── components/
+│   ├── layout/                # Header, Footer, SubNav, PageHero
+│   ├── ui/                    # Button, Card, Badge, Avatar, Sparkline, AreaChart, …
+│   ├── home/                  # Sections de la home
+│   └── portfolio/             # Détail portefeuille
+├── data/                      # Données fictives (stocks, posts, news, portefeuilles)
+└── lib/                       # Utilitaires (formatPrice, formatPercent, …)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Commandes
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev        # http://localhost:3000
+npm run build
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Design system
 
-## Learn More
+Tokens définis dans `src/app/globals.css` :
 
-To learn more about Next.js, take a look at the following resources:
+- Violet primaire `#563BFF`
+- Orange `#FF7049`
+- Vert `#20C997`
+- Noir `#0C2543`
+- Base 4px, radius `lg=16px` `xl=24px`
+- Font Inter
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Pages incluses
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+23 pages statiques + 17 fiches valeur générées en SSG, soit 40 routes au total. Toutes les données sont mockées dans `src/data/` pour pouvoir évoluer vers une intégration API plus tard.
 
-## Deploy on Vercel
+## Déploiement
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Le projet se déploie sans configuration sur Vercel. Aucune variable d'environnement requise.
